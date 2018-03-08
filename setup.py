@@ -1,9 +1,5 @@
 from flask import Flask, render_template, request
-import collections, operator
 from operator import itemgetter
-
-from datetime import datetime
-
 from nba_py import player, team
 
 app = Flask(__name__, static_url_path='/static')
