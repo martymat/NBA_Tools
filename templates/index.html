@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NBA Tools</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{ url_for('static',filename='images/icons/favicon.ico') }}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='fonts/iconic/css/material-design-iconic-font.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/animate/animate.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/css-hamburgers/hamburgers.min.css ') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/animsition/css/animsition.min.css ') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/select2/select2.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/daterangepicker/daterangepicker.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='vendor/noui/nouislider.min.css') }}">
+<!--===============================================================================================-->
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/main.css') }}">
+	<link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='css/util.css') }}">
+<!--===============================================================================================-->
+
+
+
+</head>
+<body>
+    <img src="static/images/NETS.png" alt="Brooklyn Nets">
+    <div class="container-contact100" style="width: 100%;
+                                            min-height: 100vh;
+                                            display: -webkit-box;
+                                            display: -webkit-flex;
+                                            display: -moz-box;
+                                            display: -ms-flexbox;
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            justify-content: center;
+                                            align-items: center;
+                                            background-image: url('static/images/barclays.png');
+                                            background-position:bottom;
+                                            background-repeat: no-repeat">
+        <div class="wrap-contact100">
+            <form class="contact100-form validate-form" method="POST" action="/five">
+
+                <span class="contact100-form-title">
+                    Best 6 Generator
+                </span>
+
+                <span class="under-title">
+                    What's the situation?
+                </span>
+
+
+                <div class="wrap-input100 input100-select bg1">
+                    <span class="label-input100">QUARTER</span>
+                    <div>
+                        <select id="quarter_dropdown" name="Quarter" class="js-select2" required>
+                            <option value="0">Please choose</option>
+                            <option value="1">1st Quarter</option>
+                            <option value="2">2nd Quarter</option>
+                            <option value="3">3rd Quarter</option>
+                            <option value="4">4th Quarter</option>
+                        </select>
+                        <div class="dropDownSelect2"></div>
+                    </div>
+                </div>
+
+                <div id="clutch_time">
+                    <h3 style="font-weight: bold">**If under 5 minutes left in the 4th Quarter: </h3>
+                    <br>
+                    <div class="wrap-input100 input100-select bg1">
+                        <span class="label-input100">Time Left</span>
+                        <div>
+                            <select name="Time" class="js-select2">
+                                <option value=0>Please choose</option>
+                                <option value=5> 5 Minutes</option>
+                                <option value=3> 3 Minutes</option>
+                                <option value=1> 1 Minute</option>
+                            </select>
+                            <div class="dropDownSelect2"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="wrap-input100 input100-select bg1">
+                        <span class="label-input100">Point Difference</span>
+                        <div>
+                            <select name="Point_Diff" class="js-select2">
+                                <option value=0>Please choose</option>
+                                <option value=-5> Down by more than 5</option>
+                                <option value=-3> Tied </option>
+                                <option value=5> Up by more than 5</option>
+                            </select>
+                            <div class="dropDownSelect2"></div>
+                        </div>
+                    </div>
+                    <h3 style="font-weight: bold">**If under 5 minutes left in the 4th Quarter: </h3>
+                    <br>
+                </div>
+
+                <div class="wrap-input100 input100-select bg1">
+                    <span class="label-input100">OPPONENT</span>
+                    <div>
+                        <select name="Opponent" class="js-select2" required>
+                            <option value="0">Please choose</option>
+                            <option value="HAWKS">Atlanta Hawks</option>
+                            <option value="CELTICS">Boston Celtics</option>
+                            <option value="HORNETS">Charlotte Hornets</option>
+                            <option value="BULLS">Chicago Bulls</option>
+                            <option value="CAVALIERS">Cleveland Cavaliers</option>
+                            <option value="MAVERICKS">Dallas Mavericks</option>
+                            <option value="NUGGETS">Denver Nuggets</option>
+                            <option value="PISTONS">Detroit Pistons</option>
+                            <option value="WARRIORS">Golden State Warriors</option>
+                            <option value="ROCKETS">Houston Rockets</option>
+                            <option value="PACERS">Indiana Pacers</option>
+                            <option value="CLIPPERS">LA Clippers</option>
+                            <option value="LAKERS">Los Angeles Lakers</option>
+                            <option value="GRIZZLIES">Memphis Grizzlies</option>
+                            <option value="HEAT">Miami Heat</option>
+                            <option value="BUCKS">Milwaukee Bucks</option>
+                            <option value="TIMBERWOLVES">Minnesota Timberwolves</option>
+                            <option value="PELICANS">New Orleans Pelicans</option>
+                            <option value="KNICKS">New York Knicks</option>
+                            <option value="THUNDER">Oklahoma City Thunder</option>
+                            <option value="MAGIC">Orlando Magic</option>
+                            <option value="76ERS">Philadelphia 76ers</option>
+                            <option value="SUNS">Phoenix Suns</option>
+                            <option value="TRAIL_BLAZERS">Portland Trail Blazers</option>
+                            <option value="KINGS">Sacramento Kings</option>
+                            <option value="SPURS">San Antonio Spurs</option>
+                            <option value="RAPTORS">Toronto Raptors</option>
+                            <option value="JAZZ">Utah Jazz</option>
+                            <option value="WIZARDS">Washington Wizards</option>
+                        </select>
+                        <div class="dropDownSelect2"></div>
+                    </div>
+                </div>
+                <div class="wrap-input100 input100-select bg1">
+                    <span class="label-input100">LOCATION</span>
+                    <div>
+                        <select name="Location" class="js-select2" required>
+                            <option value="0">Please choose</option>
+                            <option value="HOME">Home</option>
+                            <option value="AWAY">Away</option>
+                        </select>
+                        <div class="dropDownSelect2"></div>
+                    </div>
+                </div>
+                <div class="wrap-input100 input100-select bg1">
+                    <span class="label-input100">PREVIOUS GAMES</span>
+                    <div>
+                        <select name="Last" class="js-select2" required>
+                            <option value="0">Please choose</option>
+                            <option value="5">Last 5 Games</option>
+                            <option value="10">Last 10 Games</option>
+                            <option value="15">Last 15 Games</option>
+                        </select>
+                        <div class="dropDownSelect2"></div>
+                    </div>
+                </div>
+
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						<span>
+							Submit
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='vendor/animsition/js/animsition.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='vendor/bootstrap/js/popper.js') }}"></script>
+	<script src="{{ url_for('static',filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='vendor/select2/select2.min.js') }}"></script>
+	<script>
+		$(".js-select2").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+
+
+			$(".js-select2").each(function(){
+				$(this).on('select2:close', function (e){
+					if($(this).val() == "Please chooses") {
+						$('.js-show-service').slideUp();
+					}
+					else {
+						$('.js-show-service').slideUp();
+						$('.js-show-service').slideDown();
+					}
+				});
+			});
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='vendor/daterangepicker/moment.min.js ') }}"></script>
+	<script src="{{ url_for('static',filename='vendor/daterangepicker/daterangepicker.js ') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='vendor/countdowntime/countdowntime.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='vendor/noui/nouislider.min.js') }}"></script>
+	<script>
+	    var filterBar = document.getElementById('filter-bar');
+
+	    noUiSlider.create(filterBar, {
+	        start: [ 1500, 3900 ],
+	        connect: true,
+	        range: {
+	            'min': 1500,
+	            'max': 7500
+	        }
+	    });
+
+	    var skipValues = [
+	    document.getElementById('value-lower'),
+	    document.getElementById('value-upper')
+	    ];
+
+	    filterBar.noUiSlider.on('update', function( values, handle ) {
+	        skipValues[handle].innerHTML = Math.round(values[handle]);
+	        $('.contact100-form-range-value input[name="from-value"]').val($('#value-lower').html());
+	        $('.contact100-form-range-value input[name="to-value"]').val($('#value-upper').html());
+	    });
+	</script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='static/js/main.js') }}"></script>
+    <script src="{{ url_for('static',filename='static/bootstrap/js/load.js') }}"></script>
+    <script>
+        $(document).ready(function(){
+            $("#quarter_dropdown").change(function(){
+                $(this).find("option:selected").each(function(){
+                    var optionValue = $(this).attr("value");
+                    if(optionValue == "4"){
+                        $("#clutch_time").show();
+                    }
+
+                    else{
+                        $("#clutch_time").hide();
+                    }
+                });
+            }).change();
+        });
+	</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+
+</body>
+</html>
